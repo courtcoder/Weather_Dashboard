@@ -1,100 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Coach</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href='assets/css/styles.css'>
+    <title>Weather Dashboard</title>
   </head>
 
   <body class="flex-column min-100-vh">
     <header class="hero">
       <h1 class="app-title">
-        <i class="fa fa sun-o" aria-hidden="true"></i> Weather Coach
+        <i class="fab"></i> Weather Dashboard!
       </h1>
     </header>
 
     <main class="flex-row justify-space-between">
-      <div class="col-12 col-md-2">
+      <div class="col-12 col-md-4">
+        <!-- makes a card set up for a form -->
         <div class="card">
-          <h3 class="day-header text-uppercase">Search for a US City:</h3>
+          <h3 class="card-header text-uppercase">Search for a city</h3>
           <form id="user-form" class="card-body">
-            <label class="form-label" for="cityName">Enter City Name:</label>
-            <input
-              name="cityName"
-              id="cityName"
-              type="text"
-              autofocus="true"
-              class="form-input"
-            />
-            <label class="form-label" for="stateName">Enter State Name:</label>
-            <input
-              name="stateName"
-              id="stateName"
-              type="text"
-              autofocus="true"
-              class="form-input"
-            />
-            <button id="submitCity" type="submit" class="btn">Search</button>
+            <label class="form-label" for="username">City and State Name</label>
+            <!-- city input  -->
+            <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input" />
+            <!-- state input  -->
+            <input name="statename" id="statename" type="text" autofocus="true" class="form-input" />
+            <button type="submit" class="btn">Submit</button>
           </form>
         </div>
+        <!-- lower left side previous cities  -->
         <div class="card">
-          <div id="city-buttons" class="card-body">
-
+          <h3 class="card-header text-uppercase">Previous Cities</h3>
+          <div id="language-buttons" class="card-body">
+            <!-- update these buttons to be previous searched cities  -->
+            <button class="btn" data="data-javascript">need to update</button>
           </div>
         </div>
       </div>
-     
-           <!-- right column with top summary and lower 5 day forecast  -->
-      <div class="col-12 col-md-10">
+      <!-- right side display city weather results -->
+      <div class="col-12 col-md-8">
+        <!-- top will be weather for today for city picked  -->
+        <h2 class="subtitle">Weather for City: <span id="repo-search-term"></span></h2>
+        <div id="day1-container" class="list-group"></div>
+        <!-- lower part right side 5 day forecast for city picked  -->
         <div class="card">
-          <div class="card-body">
-            <h3 id="city-name" class="card-header text-uppercase">
-              <span id="city-search-term"><i id="day-header"></i>
-            </h3>
-            <div id="weather-container" class="list-group">
-              <!-- date, weather icon, temp, wind, humidity  -->
-              <div id="day1container">
-              </div>
+          <h3 class="card-header text-uppercase">insert city name</h3>
+          <div id="day1Forecast" class="card-body">
+            5 day forecast
+          </div>
+          <div class="card">
+            <h3 class="card-header text-uppercase">future date</h3>
+            <div id="futureForecastContainer" class="card-body">
+              <!-- append the temp, wind, humidity, and uv index  -->
             </div>
           </div>
-
-        <div class="5day-section">
-          <h4 class="subtitle-forecast">Upcoming Forecast</h4>
-          <div id="forecast-container" class="futureContainer flex-row">
-            <!-- append the temp, wind, humidity, and uv index  -->
-          </div>
         </div>
-      </div>
     </main>
-
-    <footer>
-      <h5>
-        Created by <span>Courtney Casci</span
-        ><a href="http://openweathermap.org" title="Free Weather API"
-          ><img
-            src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
-            alt="Weather data populated by openweathermap.org";
-            width="100px";
-        /></a>
-      </h5>
-    </footer>
-
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script src="./assets/js/script.js"></script>     
-          
-
-    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
+
 </html>

@@ -1,36 +1,14 @@
-
-/* Overall */
-* {
-    box-sizing: border-box;
-}
-
-/*variables*/
 :root {
     --primary: #ccdad1;
     --secondary: #9caea9;
     --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #38302e;
+    --light-blue: rgba(45, 115, 206, 0.756);
+    --dark: #090585;
     --border-radius: 0.3rem;
 }
 
-/*--headline with quicklinks*/
-header {
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-    z-index: 9999;
-}
-
-header h2 {
-    font-size: 48px;
-    padding-left: 25px;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -41,6 +19,11 @@ body {
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
 }
 
 h1,
@@ -75,7 +58,7 @@ p {
     color: var(--primary);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
+    background-color: var(--light-blue);
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
 }
@@ -96,7 +79,7 @@ p {
     color: var(--primary);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
+    background-color: var(--light-blue);
     box-shadow: 3px 3px var(--secondary);
     transform: translate(-1px, -1px);
     display: inline-block;
@@ -131,7 +114,7 @@ p {
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 6px 5px var(--light-blue);
 }
 
 .list-group {
@@ -143,7 +126,7 @@ p {
     margin-bottom: 10px;
     padding: 1.5%;
     border-radius: var(--border-radius);
-    background-color: var(--light-dark);
+    background-color: var(--light-blue);
     color: var(--primary);
     text-decoration: none;
 }
@@ -172,10 +155,9 @@ p {
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
-    min-width: 150px;
 }
 
-.day-header {
+.card-header {
     color: var(--primary);
     background-color: var(--dark);
     padding: 2.5%;
@@ -184,38 +166,6 @@ p {
 
 .card-body {
     padding: 2.5%;
-}
-
-.bg-info {
-    background-color: rgb(98, 98, 181);
-    margin-left: 10px;
-}
-
-.card-header {
-    color: var(--primary);
-    background-color: var(--light-dark);
-    padding: 1.5% 10%;
-    margin: 0 20% 0 0;
-    border-radius: var(--border-radius);
-    font-size: 20px;
-}
-
-.card-header-desc {
-    margin-left: 10vw;
-    padding-top: 10px;
-    font-size: 17px;
-    color: var(--primary);
-    /* add some cool font-family: ; */
-}
-
-.day-image {
-    width: 60px;
-    margin-left: 10vw;
-}
-
-.subtitle-forecast {
-    margin-bottom: 10px;
-    font-size: 20px;
 }
 
 /* FORM */
@@ -235,7 +185,7 @@ p {
     padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
-    border: 2px solid var(--light-dark);
+    border: 2px solid var(--light-blue);
     border-radius: var(--border-radius);
 }
 
@@ -349,54 +299,24 @@ p {
     flex: 0 0 100%;
 }
 
-/*footer*/
-footer {
-    padding: 20px;
-    padding-left: 40px;
-    width: 100vw;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-    display: inline-block;
+.purpleuvi {
+    color: purple;
 }
 
-footer h5 {
-    display: inline-block;
-    font-size: 20px;
-}
-
-footer span {
-    font-size: 25px;
-}
-
-footer a {
-    margin-left: 75vw;
-}
-
-/* ///UVI font colors  */
-.greenUVI {
+.greenuvi {
     color: green;
 }
 
-.green2UVI {
-    color: lightgreen;
-}
-
-.yellowUVI {
-    color: yellow;
-}
-
-.orangeUVI {
-    color: orange;
-}
-
-.redUVI {
+.reduvi {
     color: red;
 }
 
-.purpleUVI {
-    color: purple;
+.yellowuvi {
+    color: yellow;
+}
+
+.orangeuvi {
+    color: orange;
 }
 
 /* col-sm */
